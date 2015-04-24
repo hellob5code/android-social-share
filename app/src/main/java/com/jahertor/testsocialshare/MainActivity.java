@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 
-import com.jahertor.socialshare.SocialNetwork;
 import com.jahertor.socialshare.SocialShare;
 
 import java.util.ArrayList;
@@ -24,16 +23,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ArrayList<Integer> networksIWant = new ArrayList<>();
-        networksIWant.add(SocialNetwork.WHATSAPP);
-        networksIWant.add(SocialNetwork.FACEBOOK);
-        networksIWant.add(SocialNetwork.TWITTER);
-        networksIWant.add(SocialNetwork.INSTAGRAM);
+        /* Default behavoir:
+            All networks, default images, default UI */
 
-        final SocialShare socialShare = new SocialShare(this, networksIWant);
+        ArrayList<Integer> socialNetworks = new ArrayList<>();
+
+        final SocialShare socialShare = new SocialShare(this, socialNetworks);
         socialShare.setSubject("I am a subject");
         socialShare.setMessage("And I am a really interesting message for share");
 
+        // When click button, show dialog
         final Button shareButton = (Button) findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override

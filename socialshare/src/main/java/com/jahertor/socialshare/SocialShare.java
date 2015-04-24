@@ -121,7 +121,7 @@ public class SocialShare {
         });
 
         if (items.size() == 0)
-            v.findViewById(R.id.no_results).setVisibility(View.GONE);
+            v.findViewById(R.id.no_results).setVisibility(View.VISIBLE);
 
         return v;
     }
