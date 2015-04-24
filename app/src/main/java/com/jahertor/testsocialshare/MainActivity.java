@@ -10,8 +10,6 @@ import android.widget.Button;
 
 import com.jahertor.socialshare.SocialShare;
 
-import java.util.ArrayList;
-
 
 /**
  * Basic sample. Click the button for share a placeholder text
@@ -26,9 +24,9 @@ public class MainActivity extends ActionBarActivity {
         /* Default behavoir:
             All networks, default images, default UI */
 
-        ArrayList<Integer> socialNetworks = new ArrayList<>();
+        //ArrayList<Integer> socialNetworks = new ArrayList<>();
 
-        final SocialShare socialShare = new SocialShare(this, socialNetworks);
+        final SocialShare socialShare = new SocialShare(this);
         socialShare.setSubject("I am a subject");
         socialShare.setMessage("And I am a really interesting message for share");
 
